@@ -73,7 +73,10 @@ def main():
     db = get_db()
     cursor = db.cursor()
     cursor.execute("SELECT * FROM users;")
-    field_names = [i[0] for i in cursor.description]
+    if cursor.description is not None:
+        field_names = [i[0] for i in cursor.description]
+    else:
+        field_names = []
 
     logger = get_logger()
 
