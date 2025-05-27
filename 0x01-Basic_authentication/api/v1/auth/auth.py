@@ -13,7 +13,7 @@ class Auth():
         if path is None or excluded_paths is None or len(excluded_paths) <= 0:
             return True
         normalized_path = path if path.endswith('/') else path + '/'
-        
+
         if normalized_path in excluded_paths:
             return False
         return True
