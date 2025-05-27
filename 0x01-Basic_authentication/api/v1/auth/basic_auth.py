@@ -8,6 +8,8 @@ Basic Authentication in an API system.
 """
 
 from auth import Auth
+from flask import request
+from typing import List, TypeVar
 
 
 class BasicAuth(Auth):
