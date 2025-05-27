@@ -1,36 +1,12 @@
 #!/usr/bin/env python3
+""" Module of Basic Authentication
 """
-API Authentication Management Module
-
-This module provides basic authentication functionality as an extension
-of the base Auth class. It serves as a starting point for implementing
-Basic Authentication in an API system.
-"""
-
-from auth import Auth
-from flask import request
-from typing import List, TypeVar
+from api.v1.auth.auth import Auth
+from base64 import b64decode
+from models.user import User
+from typing import TypeVar
 
 
 class BasicAuth(Auth):
-    """
-    Basic Authentication Class
-    
-    Inherits from the base Auth class to provide Basic Authentication
-    functionality. Currently serves as a placeholder for future implementation
-    of Basic Authentication methods.
-    
-    Basic Authentication typically involves:
-    - Extracting credentials from the Authorization header
-    - Decoding base64-encoded credentials
-    - Validating username and password
-    
-    Note: This is currently a skeleton implementation (pass statement)
-    that will need to be expanded with actual authentication logic.
-    
-    Args:
-        Auth (class): The parent authentication class that provides
-                      base authentication functionality that this class
-                      extends.
-    """
+    """ Basic Authentication Class """
     pass
