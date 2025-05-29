@@ -10,8 +10,9 @@ from typing import TypeVar
 class BasicAuth(Auth):
     """ Basic Authentication Class """
 
-    def extract_base64_authorization_header(self, authorization_header: str
-                                            ) -> str:
+    def extract_base64_authorization_header(
+        self, authorization_header: str
+    ) -> str:
         """ Extract Base 64 Authorization Header """
 
         if authorization_header is None:
@@ -22,9 +23,10 @@ class BasicAuth(Auth):
             return None
         return authorization_header[6:]
 
-    def decode_base64_authorization_header(self,
-                                           base64_authorization_header: str
-                                           ) -> str:
+    def decode_base64_authorization_header(
+        self,
+        base64_authorization_header: str
+    ) -> str:
         """ Decodes the value of a base64 string """
 
         if base64_authorization_header is None:
@@ -39,12 +41,14 @@ class BasicAuth(Auth):
         except Exception:
             return None
 
-    def extract_user_credentials(self, decoded_base64_authorization_header: str) -> (str, str):
+    def extract_user_credentials(
+        self,
+        decoded_base64_authorization_header: str
+    ) -> (str, str):
         """
         Returns the user email and password from the
         Base64 decoded value
         """
-
         if decoded_base64_authorization_header is None:
             return None, None
 
