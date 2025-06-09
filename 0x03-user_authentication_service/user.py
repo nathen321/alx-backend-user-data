@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+Users model
+"""
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, Integer, String
 
